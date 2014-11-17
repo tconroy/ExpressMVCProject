@@ -1,0 +1,17 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title MVCProject
+    script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
+    link(rel="stylesheet", href="assets/css/custom.css")
+    link(rel="shortcut icon", href="/img/favicon.png")
+  body
+    block nav
+      include ./partials/navbar.jade
+    div#status
+    .container
+      block content
+  footer
+    script(type="text/javascript" src="assets/js/client.js")

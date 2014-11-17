@@ -1,0 +1,8 @@
+#form-login {
+  max-width: 350px;
+  min-width: 230px;
+  margin: 0 auto;
+}
+#form-login h1, h2 {
+  text-align: center;
+}

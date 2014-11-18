@@ -66,9 +66,9 @@ UserSchema.methods.validatePassword = function(pw, callback) {
   crypto.pbkdf2(pw, this.salt, iterations, keyLength, function(err, hash){
     if (hash.toString('hex') !== pass) {
       return callback(false);
-    };
+    }
     return callback(true);
-  })
+  });
 };
 
 
@@ -114,18 +114,18 @@ UserSchema.statics.authenticate = function (username, password, callback) {
   return UserModel.findByUsername(username, function(err, doc) {
     if (err) {
       return callback(err);
-    };
+    }
     if (!doc) {
       return callback();
-    };
+    }
     doc.validatePassword(password, function(result) {
       if (result === true) {
         return callback(null, doc);
-      };
+      }
       return callback();
-    })
+    });
   });
-}
+};
 
 
 /**

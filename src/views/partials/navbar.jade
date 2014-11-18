@@ -13,8 +13,11 @@ nav.navbar.navbar-default(role='navigation')
           a(href='/dashboard')
             | Dashboard
             span.sr-only (current)
-        li
+        li(class=(current_route === '/notes' ? 'active' : ''))
+          a(href='/notes') My Notes
+        li(class=(current_route === '/about' ? 'active' : ''))
           a(href='/about') About
+      ul.nav.navbar-nav.navbar-right
         li
-          a(href='/logout') Logout
-
+          a(href='/logout' title='logout')
+            span(class='glyphicon glyphicon-log-out')

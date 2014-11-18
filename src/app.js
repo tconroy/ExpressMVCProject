@@ -18,7 +18,7 @@ var db = mongoose.connect(dbURL, function(err) {
   if (err) {
     console.log("Could not connect to mongodb:");
     throw err;
-  };
+  }
 });
 
 // define server
@@ -30,6 +30,7 @@ var server,
 app.use('/assets', express.static(path.resolve(config.staticAssets.path)));
 app.use(compression());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(session({
   store: new RedisStore({
     host: config.redis.host,

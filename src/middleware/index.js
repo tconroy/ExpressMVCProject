@@ -11,14 +11,21 @@
  */
 var requiresLogin = function (req, res, next) {
   if (!req.session.user) {
-    return res.redirect('/');
-  };
+    return res.redirect('/login');
+  }
   next();
 };
 
+/**
+ * [requiresLogout description]
+ * @param  {[type]}   req  [description]
+ * @param  {[type]}   res  [description]
+ * @param  {Function} next [description]
+ * @return {[type]}        [description]
+ */
 var requiresLogout = function (req, res, next) {
   if (req.session.user) {
-    return res.redirect('/');
+    return res.redirect('/dashboard');
   }
   next();
 };
@@ -33,7 +40,7 @@ var requiresLogout = function (req, res, next) {
 var requiresSecure = function (req, res, next) {
   if (req.headers['x-forwarded-proto'] != 'https') {
     return res.redirect('https://'+req.host+req.url);
-  };
+  }
   next();
 };
 
@@ -47,7 +54,6 @@ var requiresSecure = function (req, res, next) {
 var bypassSecure = function (req, res, next) {
   next();
 };
-
 
 /**
  * EXPORT MODULES

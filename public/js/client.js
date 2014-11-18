@@ -14,6 +14,9 @@ var Client = {
    */
   pageHandler: function (path) {
     console.log(path);
+    if (path=='/') {
+      $('body').addClass('login');
+    }
     $('ul.nav').find('a[href="'+path+'"]').parent().addClass('active');
   },
   /**

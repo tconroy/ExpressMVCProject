@@ -1,4 +1,10 @@
 extends ../base.jade
 block content
-  p
-    | this is the dashboard.
+  .row
+    .col-md-12
+      h1.dashheader.text-center
+        | What is your story?
+    include ../partials/form_editor
+
+block scripts
+  script(type="text/javascript" src="assets/js/editor.js")

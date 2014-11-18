@@ -66,7 +66,7 @@ var redisPASS;
 if (process.env.REDISCLOUD_URL) {
   redisURL = url.parse(process.env.REDISCLOUD_URL);
   redisPASS = redisURL.auth.split(":")[1];
-};
+}
 var redis = {
   development: {
     host: 'localhost',

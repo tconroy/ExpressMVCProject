@@ -1,3 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
+* {
+  font-family: Lato;
+}
+
+/**
+ * LOGIN FORM
+ */
+body.login {
+  background: url('../img/login-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 #form-login {
   max-width: 350px;
   min-width: 230px;
@@ -5,4 +22,91 @@
 }
 #form-login h1, h2 {
   text-align: center;
+}
+
+/**
+ * REGISTER FORM
+ */
+#form-register {
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+#form-register label {
+  text-align: left;
+}
+
+
+/**
+ * EDITOR PAGE
+ */
+body.dashboard {
+  background: linear-gradient(whitesmoke, #fff);
+}
+.dashheader {
+  font-weight: lighter;
+  font-size: 4em;
+  margin: 0.5em 0 1em 0;
+}
+.postmeta {
+  margin-bottom: 2em;
+  font-size: .75em;
+  font-style: italic;
+}
+input.line {
+  display: block;
+  border: none;
+  color: #333;
+  background: transparent;
+  border-bottom: 1px dotted black;
+  padding: 5px 2px 0 2px;
+  font-family: "Vollkorn", "Times New Roman", serif;
+}
+input.line:focus {
+  outline: none;
+  border-color: #51CBEE;
+}
+.texteditor {
+  font-family: "Vollkorn", "Times New Roman", serif !important;
+}
+.texteditor-wrapper {
+  font-family: "Vollkorn", "Times New Roman", serif;
+  background-color: #fff;
+  height: 100%;
+  color: #333;
+  font-size: 1.5em;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.texteditor-wrapper:before, .texteditor-wrapper:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.texteditor-wrapper:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.texteditor-wrapper:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+.texteditor-wrapper.save {
+-webkit-box-shadow: 0px 0px 15px 10px rgba(211, 243, 211, .75);
+box-shadow: 0px 0px 15px 10px rgba(211, 243, 211, .75)
 }

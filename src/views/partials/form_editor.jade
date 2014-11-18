@@ -1,0 +1,9 @@
+form#form-editor(role='form' action='/notes' method='POST')
+  .col-md-12
+    .texteditor-wrapper
+      .postmeta.row
+        .col-xs-8
+          input#postTitle.line(placeholder="title" style="width: 75%")
+        .col-xs-4
+          input#postDate.pull-right.line( readonly, value=( new Date().toDateString() ))
+      .texteditor#postContents

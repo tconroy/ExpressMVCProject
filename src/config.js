@@ -37,7 +37,7 @@ var http = {
   },
   production: {
     port: process.env.PORT || process.env.NODE_PORT || 3000,
-    baseUrl: 'http://mysterious-bastion-5343.herokuapp.com'
+    baseUrl: 'https://mvcproject1.herokuapp.com/'
   }
 };
 

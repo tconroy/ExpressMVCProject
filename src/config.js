@@ -51,8 +51,9 @@ var DB = {
     host: 'localhost',
     database: 'test_MVCProject'
   },
+  /* stored in MONGO_HQ process ENV variable for Heroku */
   production: {
-    host: undefined, /* stored in MONGO_HQ process ENV variable for Heroku */
+    host: process.env.MONGOHQ_URL,
     database: undefined
   }
 };
